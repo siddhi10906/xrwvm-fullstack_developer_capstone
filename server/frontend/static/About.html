@@ -1,68 +1,228 @@
-<html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dealerships</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Project stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            background-color: #f4f7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: darkturquoise;
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-size: 18px;
+            color: #102a43 !important;
+            margin-right: 12px;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .about-header {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .about-header h1 {
+            color: #12304a;
+            font-weight: bold;
+        }
+
+        .about-header p {
+            color: #526579;
+            font-size: 17px;
+        }
+
+        .team-card {
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .team-card .card-body {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .team-card h5 {
+            color: #12304a;
+            font-weight: bold;
+        }
+
+        .team-role {
+            color: #008b8b;
+            font-weight: 600;
+        }
+
+        .team-card a {
+            color: #007b83;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #526579;
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+<body>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Dealerships</a>
 
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us heading -->
+    <main class="container my-4">
+        <section class="about-header">
+            <h1>About Our Team</h1>
+            <p>
+                Meet the team dedicated to making your car-buying
+                experience simple, transparent, and reliable.
+            </p>
+        </section>
+
+        <!-- Team member cards -->
+        <section class="row g-4 justify-content-center">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card team-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+                        alt="Portrait of the dealership manager">
+                    <div class="card-body">
+                        <h5>Alex Morgan</h5>
+                        <p class="team-role">Dealership Manager</p>
+                        <p class="card-text">
+                            Alex oversees dealership operations and helps
+                            customers find vehicles that suit their needs.
+                            He focuses on quality service and customer trust.
+                        </p>
+                        <a href="mailto:alex.morgan@example.com">
+                            alex.morgan@example.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card team-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+                        alt="Portrait of the customer relations specialist">
+                    <div class="card-body">
+                        <h5>Sarah Williams</h5>
+                        <p class="team-role">Customer Relations Specialist</p>
+                        <p class="card-text">
+                            Sarah assists customers with their questions
+                            and guides them through the vehicle selection
+                            process. She works to make every visit welcoming.
+                        </p>
+                        <a href="mailto:sarah.williams@example.com">
+                            sarah.williams@example.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card team-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80"
+                        alt="Portrait of the sales consultant">
+                    <div class="card-body">
+                        <h5>David Johnson</h5>
+                        <p class="team-role">Sales Consultant</p>
+                        <p class="card-text">
+                            David explains vehicle features and available
+                            options to help customers make informed choices.
+                            He values honest advice and clear communication.
+                        </p>
+                        <a href="mailto:david.johnson@example.com">
+                            david.johnson@example.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dealerships. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
 </html>
+```
